@@ -1,0 +1,28 @@
+{
+  "name": "cview",
+  "version": "1.0.0",
+  "description": "Cview is a webpage for making CV's, Resumees and more information n about workers and companies",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "resumee",
+    "webpage",
+    "bootstrap"
+  ],
+  "author": "Miguel Gallego",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "lite-server": "^2.6.1"
+  }
+}
