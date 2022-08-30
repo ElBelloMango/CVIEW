@@ -24,4 +24,13 @@ body {
   width: 50px;
 }
 
+.offer {
+  padding: 5px 0 5px 0;
+  border-top: 1px ridge;
+  border-bottom: 1px ridge;
+}
+.offer .media img {
+  width: 160px;
+}
+
 /*# sourceMappingURL=styles.css.map */

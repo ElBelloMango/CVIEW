@@ -16,7 +16,7 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">CVIEW</a>
             <ul class="navbar-nav mr-sm-auto">
-                <li class="nav-item m-sm-2"><a class="nav-link disabled" >SEARCH</a></li>
+                <li class="nav-item m-sm-2 active"><a class="nav-link" href="">SEARCH</a></li>
                 <li class="nav-item m-sm-2"><a class="nav-link" href="">What is CVIEW?</a></li>
                 <a class="navbar-text m-sm-2" id="loginBtn">LOGIN</a>
             </ul>
@@ -71,10 +71,12 @@
                             </div>
                         </div>
                         <div class="form-row justify-content-center mt-2">
-                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signInBtn" title="To Sign In Modal">Sign
+                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signInBtn"
+                                title="To Sign In Modal">Sign
                                 In</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm col-5 offset-1"
-                                id="logInBtn" title="If you press log in as a worker it will redirect you to worker user page, same for company">Log In</button>
+                            <button type="button" class="btn btn-outline-primary btn-sm col-5 offset-1" id="logInBtn"
+                                title="If you press log in as a worker it will redirect you to worker user page, same for company">Log
+                                In</button>
                         </div>
                     </form>
                 </div>
@@ -110,7 +112,8 @@
                             </div>
                         </div>
                         <div class="form-row mt-2">
-                            <label for="confirmpassword" class="col-form-label col-md-2"> <span class="fa fa-lock"></span>
+                            <label for="confirmpassword" class="col-form-label col-md-2"> <span
+                                    class="fa fa-lock"></span>
                                 Confirm Password</label>
                             <div class=" col-md-10">
                                 <input class="form-control" type="password" id="confirmpassword" name="confirmpassword"
@@ -118,7 +121,8 @@
                             </div>
                         </div>
                         <div class="form-row justify-content-center mt-2">
-                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signIn" title="To Sign In Modal">Sign
+                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signIn"
+                                title="To Sign In Modal">Sign
                                 In</button>
                         </div>
                     </form>
@@ -128,76 +132,130 @@
     </div>
     <!-- Page Content -->
     <div class="container">
-        <form class="form mt-5">
-            <div class="form-group row">
-                <h1><span class="fa fa-search"></span> What Are You Looking For?</h1>
-            </div>
-            <div class="form-group row row-header mb-4">
-                <div class="col-12 col-sm form-check form-check-inline">
-                    <div class="col col-sm pl-0 radio-option">
-                        <input class="form-check-input" type="radio" name="Search" id="jobOpt" value="Job">
-                        <label class="form-check-label" for="inlineradio1">Company Job</label>
+        <div class="row row-header">
+            <h1 class="mt-4 col-12"> Search</h1>
+            <h3 class="col-12"> <small> We found these offers for you:</small></h3>
+        </div>
+        <div class="row offers ml-4">
+            <!-- Offer Structure -->
+            <div class="row offer mt-2" id="offer#">
+                <div class="media col-12">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/placeholder.png" alt="uthappizza">
+                    <div class="media-body col-10">
+                        <h2 class="col-12">
+                            Name - Degree
+                        </h2>
+                        <p class="col-12">Qualifications Summary</p>
                     </div>
-                    <div class="col col-sm pl-0 radio-option">
-                        <input class="form-check-input" type="radio" name="Search" id="WorkerOpt" value="Worker">
-                        <label class="form-check-label" for="inlineradio2">Worker</label>
+                </div>
+                <div class="col-12 mt-2">
+                    <p>Breef Description</p>
+                </div>
+            </div>
+            <!-- End Offer Structure -->
+            <!-- Offer Structure -->
+            <div class="row offer mt-2" id="offer#">
+                <div class="media col-12">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/placeholder.png" alt="uthappizza">
+                    <div class="media-body col-10">
+                        <h2 class="col-12">
+                            Name - Degree
+                        </h2>
+                        <p class="col-12">Qualifications Summary</p>
                     </div>
                 </div>
-            </div>
-            <div class="form-group row row-header collapse" id="JobFind">
-                <label for="Search">Please state your search in the field bellow so we can help you find your perfect
-                    job</label>
-                <div class="col-md-10 pl-0">
-                    <textarea name="searchtermsJob" id="JobSearch" cols="85" rows="1"></textarea>
+                <div class="col-12 mt-2">
+                    <p>Breef Description</p>
                 </div>
-                <a type="submit" class="btn btn-primary col-md-7" href="jobs.html" > Search </a>
             </div>
-            <div class="form-group row row-header collapse" id="WorkerFind">
-                <label for="Search">Please state your search in the field bellow so we can help you find the perfect
-                    worker for your company</label>
-                <div class="col-md-10 pl-0">
-                    <textarea name="searchtermsWorker" id="WorkerSearch" cols="85" rows="1"></textarea>
+            <!-- End Offer Structure -->
+            <!-- Offer Structure -->
+            <div class="row offer mt-2" id="offer#">
+                <div class="media col-12">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/placeholder.png" alt="uthappizza">
+                    <div class="media-body col-10">
+                        <h2 class="col-12">
+                            Name - Degree
+                        </h2>
+                        <p class="col-12">Qualifications Summary</p>
+                    </div>
                 </div>
-                <a type="submit" class="btn btn-primary col-md-7" href="workers.html"> Search </a>
+                <div class="col-12 mt-2">
+                    <p>Breef Description</p>
+                </div>
             </div>
-        </form>
-    </div>
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Deploy TextAreas
-            $('#jobOpt').click(function () {
-                $('#JobFind').collapse('show');
-                $('#WorkerFind').collapse('hide');
-            });
-            $('#WorkerOpt').click(function () {
-                $('#WorkerFind').collapse('show');
-                $('#JobFind').collapse('hide');
-            });
+            <!-- End Offer Structure -->
+            <!-- Offer Structure -->
+            <div class="row offer mt-2" id="offer#">
+                <div class="media col-12">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/placeholder.png" alt="uthappizza">
+                    <div class="media-body col-10">
+                        <h2 class="col-12">
+                            Name - Degree
+                        </h2>
+                        <p class="col-12">Qualifications Summary</p>
+                    </div>
+                </div>
+                <div class="col-12 mt-2">
+                    <p>Breef Description</p>
+                </div>
+            </div>
+            <!-- End Offer Structure -->
+            <!-- Offer Structure -->
+            <div class="row offer mt-2" id="offer#">
+                <div class="media col-12">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/placeholder.png" alt="uthappizza">
+                    <div class="media-body col-10">
+                        <h2 class="col-12">
+                            Name - Degree
+                        </h2>
+                        <p class="col-12">Qualifications Summary</p>
+                    </div>
+                </div>
+                <div class="col-12 mt-2">
+                    <p>Breef Description</p>
+                </div>
+            </div>
+            <!-- End Offer Structure -->
 
-            // Deploy Login Modal
-            $("#loginBtn").click(function () {
-                $("#loginModal").modal('toggle');
-            });
 
-            //ToolTips
-            $('#signInBtn').tooltip();
-            $('#logInBtn').tooltip();
+        </div>
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Deploy TextAreas
+                $('#jobOpt').click(function () {
+                    $('#JobFind').collapse('show');
+                    $('#WorkerFind').collapse('hide');
+                });
+                $('#WorkerOpt').click(function () {
+                    $('#WorkerFind').collapse('show');
+                    $('#JobFind').collapse('hide');
+                });
 
-            // Deploy SignIn Modal
-            $("#signInBtn").click(function(){
-                $("#loginModal").modal('toggle');
-                $("#signinModal").modal('toggle');
+                // Deploy Login Modal
+                $("#loginBtn").click(function () {
+                    $("#loginModal").modal('toggle');
+                });
+
+                //ToolTips
+                $('#signInBtn').tooltip();
+                $('#logInBtn').tooltip();
+
+                // Deploy SignIn Modal
+                $("#signInBtn").click(function () {
+                    $("#loginModal").modal('toggle');
+                    $("#signinModal").modal('toggle');
+                });
+                // End Sign In
+                $('#signIn').click(function () {
+                    $("#signinModal").modal('toggle');
+                    $("#loginModal").modal('toggle');
+                });
             });
-            // End Sign In
-            $('#signIn').click(function(){
-                $("#signinModal").modal('toggle');
-                $("#loginModal").modal('toggle');
-            });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
