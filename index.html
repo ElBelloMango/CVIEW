@@ -16,39 +16,189 @@
         <div class="container">
             <a class="navbar-brand" href="">CVIEW</a>
             <ul class="navbar-nav mr-sm-auto">
-                <li class="nav-item m-sm-2"><a class="nav-link" href="">SEARCH</a></li>
+                <li class="nav-item m-sm-2 disabled"><a class="nav-link disabled" href="">SEARCH</a></li>
                 <li class="nav-item m-sm-2"><a class="nav-link" href="">What is CVIEW?</a></li>
-                <a class="navbar-text m-sm-2" id="loginBtn" href="">LOGIN</a>
+                <a class="navbar-text m-sm-2" id="loginBtn">LOGIN</a>
             </ul>
-
-
         </div>
     </nav>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Welcome To CVIEW!</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <label for="email" class="col-form-label col-md-2"> <span class="fa fa-envelope"></span>
+                                Email</label>
+                            <div class=" col-md-10">
+                                <input class="form-control" type="email" id="email" name="email"
+                                    placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <div class="form-row mt-2">
+                            <label for="password" class="col-form-label col-md-2"> <span class="fa fa-lock"></span>
+                                Password</label>
+                            <div class=" col-md-10">
+                                <input class="form-control" type="password" id="password" name="password"
+                                    placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="rememberme" name="rememberme">
+                                    <label for="rememberme" class="form-check-label"> Remember Me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row mt-5 mb-5 bg-warning">
+                            <h3 class="col-12">This section of the form is for visualization purposes only</h3>
+                            <div class="col-12 col-sm btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-success active">
+                                    <input type="radio" name="loginType" value="Company" id="company" checked>
+                                    company
+                                </label>
+                                <label class="btn btn-outline-success">
+                                    <input type="radio" name="loginType" value="Worker" id="worker"> worker
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center mt-2">
+                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signInBtn" title="To Sign In Modal">Sign
+                                In</button>
+                            <button type="button" class="btn btn-outline-primary btn-sm col-5 offset-1"
+                                id="logInBtn" title="If you press log in as a worker it will redirect you to worker user page, same for company">Log In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign In Modal -->
+    <div id="signinModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Welcome To CVIEW!</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <label for="email" class="col-form-label col-md-2"> <span class="fa fa-envelope"></span>
+                                Email</label>
+                            <div class=" col-md-10">
+                                <input class="form-control" type="email" id="email" name="email"
+                                    placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <div class="form-row mt-2">
+                            <label for="password" class="col-form-label col-md-2"> <span class="fa fa-lock"></span>
+                                Password</label>
+                            <div class=" col-md-10">
+                                <input class="form-control" type="password" id="password" name="password"
+                                    placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-row mt-2">
+                            <label for="confirmpassword" class="col-form-label col-md-2"> <span class="fa fa-lock"></span>
+                                Confirm Password</label>
+                            <div class=" col-md-10">
+                                <input class="form-control" type="password" id="confirmpassword" name="confirmpassword"
+                                    placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center mt-2">
+                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signIn" title="To Sign In Modal">Sign
+                                In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Content -->
     <div class="container">
-        <!-- <form class="form mt-5">
+        <form class="form mt-5">
             <div class="form-group row">
                 <h1><span class="fa fa-search"></span> What Are You Looking For?</h1>
             </div>
-            <div class="form-group row mb-4">
-                <div class="col-12 justify-content-center col-sm form-check form-check-inline">
-                    <div class="col col-sm">
-                        <input class="form-check-input" type="radio" name="Search" id="inlineradio1" value="Job">
+            <div class="form-group row row-header mb-4">
+                <div class="col-12 col-sm form-check form-check-inline">
+                    <div class="col col-sm pl-0 radio-option">
+                        <input class="form-check-input" type="radio" name="Search" id="jobOpt" value="Job">
                         <label class="form-check-label" for="inlineradio1">Company Job</label>
                     </div>
-                    <div class="col col-sm">
-                        <input class="form-check-input" type="radio" name="Search" id="inlineradio2" value="Worker">
+                    <div class="col col-sm pl-0 radio-option">
+                        <input class="form-check-input" type="radio" name="Search" id="WorkerOpt" value="Worker">
                         <label class="form-check-label" for="inlineradio2">Worker</label>
                     </div>
+                </div>
+            </div>
+            <div class="form-group row row-header collapse" id="JobFind">
+                <label for="Search">Please state your search in the field bellow so we can help you find your perfect
+                    job</label>
+                <div class="col-md-10 pl-0">
+                    <textarea name="searchtermsJob" id="JobSearch" cols="85" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="form-group row row-header collapse" id="WorkerFind">
+                <label for="Search">Please state your search in the field bellow so we can help you find the perfect
+                    worker for your company</label>
+                <div class="col-md-10 pl-0">
+                    <textarea name="searchtermsWorker" id="WorkerSearch" cols="85" rows="1"></textarea>
                 </div>
             </div>
             <div class="form-group row offset-3">
                 <button type="submit" class="btn btn-primary"> Search </button>
             </div>
-        </form> -->
+        </form>
     </div>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Deploy TextAreas
+            $('#jobOpt').click(function () {
+                $('#JobFind').collapse('show');
+                $('#WorkerFind').collapse('hide');
+            });
+            $('#WorkerOpt').click(function () {
+                $('#WorkerFind').collapse('show');
+                $('#JobFind').collapse('hide');
+            });
+
+            // Deploy Login Modal
+            $("#loginBtn").click(function () {
+                $("#loginModal").modal('toggle');
+            });
+
+            //ToolTips
+            $('#signInBtn').tooltip();
+            $('#logInBtn').tooltip();
+
+            // Deploy SignIn Modal
+            $("#signInBtn").click(function(){
+                $("#loginModal").modal('toggle');
+                $("#signinModal").modal('toggle');
+            });
+            // End Sign In
+            $('#signIn').click(function(){
+                $("#signinModal").modal('toggle');
+                $("#loginModal").modal('toggle');
+            });
+        });
+    </script>
 </body>
 
 </html>

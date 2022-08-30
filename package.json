@@ -4,8 +4,11 @@
   "description": "Cview is a webpage for making CV's, Resumees and more information n about workers and companies",
   "main": "index.html",
   "scripts": {
-    "start": "npm run lite",
+    "start": "npm run watch:all",
     "lite": "lite-server",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "scss": "sass css/:css/",
+    "watch:all" : "parallelshell \"npm run watch:scss\" \"npm run lite\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -23,6 +26,9 @@
   "devDependencies": {
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.1",
+    "sass": "^1.54.6"
   }
 }
