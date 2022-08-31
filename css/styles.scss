@@ -34,3 +34,16 @@ body {
         }
     }
 }
+
+.profile{
+    padding: 5px 0 5px 0;
+    .media {
+        img {
+            width: 160px;
+        }
+    }
+    .profinfo{
+        border: 1px ridge;
+        height: 300px;
+    }
+}

@@ -33,4 +33,15 @@ body {
   width: 160px;
 }
 
+.profile {
+  padding: 5px 0 5px 0;
+}
+.profile .media img {
+  width: 160px;
+}
+.profile .profinfo {
+  border: 1px ridge;
+  height: 300px;
+}
+
 /*# sourceMappingURL=styles.css.map */

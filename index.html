@@ -16,9 +16,9 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">CVIEW</a>
             <ul class="navbar-nav mr-sm-auto">
-                <li class="nav-item m-sm-2"><a class="nav-link disabled" >SEARCH</a></li>
+                <li class="nav-item m-sm-2"><a class="nav-link disabled">SEARCH</a></li>
                 <li class="nav-item m-sm-2"><a class="nav-link" href="">What is CVIEW?</a></li>
-                <a class="navbar-text m-sm-2" id="loginBtn">LOGIN</a>
+                <a class="navbar-text m-sm-2 btn" id="loginBtn">LOGIN</a>
             </ul>
         </div>
     </nav>
@@ -71,10 +71,12 @@
                             </div>
                         </div>
                         <div class="form-row justify-content-center mt-2">
-                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signInBtn" title="To Sign In Modal">Sign
+                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signInBtn"
+                                title="To Sign In Modal">Sign
                                 In</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm col-5 offset-1"
-                                id="logInBtn" title="If you press log in as a worker it will redirect you to worker user page, same for company">Log In</button>
+                            <button type="button" class="btn btn-outline-primary btn-sm col-5 offset-1" id="logInBtn"
+                                title="If you press log in as a worker it will redirect you to worker user page, same for company">Log
+                                In</button>
                         </div>
                     </form>
                 </div>
@@ -110,7 +112,8 @@
                             </div>
                         </div>
                         <div class="form-row mt-2">
-                            <label for="confirmpassword" class="col-form-label col-md-2"> <span class="fa fa-lock"></span>
+                            <label for="confirmpassword" class="col-form-label col-md-2"> <span
+                                    class="fa fa-lock"></span>
                                 Confirm Password</label>
                             <div class=" col-md-10">
                                 <input class="form-control" type="password" id="confirmpassword" name="confirmpassword"
@@ -118,7 +121,8 @@
                             </div>
                         </div>
                         <div class="form-row justify-content-center mt-2">
-                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signIn" title="To Sign In Modal">Sign
+                            <button type="button" class="btn btn-outline-info btn-sm col-5" id="signIn"
+                                title="To Sign In Modal">Sign
                                 In</button>
                         </div>
                     </form>
@@ -150,7 +154,7 @@
                 <div class="col-md-10 pl-0">
                     <textarea name="searchtermsJob" id="JobSearch" cols="85" rows="1"></textarea>
                 </div>
-                <a type="submit" class="btn btn-primary col-md-7" href="jobs.html" > Search </a>
+                <a type="submit" class="btn btn-primary col-md-7" href="jobs.html"> Search </a>
             </div>
             <div class="form-group row row-header collapse" id="WorkerFind">
                 <label for="Search">Please state your search in the field bellow so we can help you find the perfect
@@ -165,39 +169,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Deploy TextAreas
-            $('#jobOpt').click(function () {
-                $('#JobFind').collapse('show');
-                $('#WorkerFind').collapse('hide');
-            });
-            $('#WorkerOpt').click(function () {
-                $('#WorkerFind').collapse('show');
-                $('#JobFind').collapse('hide');
-            });
-
-            // Deploy Login Modal
-            $("#loginBtn").click(function () {
-                $("#loginModal").modal('toggle');
-            });
-
-            //ToolTips
-            $('#signInBtn').tooltip();
-            $('#logInBtn').tooltip();
-
-            // Deploy SignIn Modal
-            $("#signInBtn").click(function(){
-                $("#loginModal").modal('toggle');
-                $("#signinModal").modal('toggle');
-            });
-            // End Sign In
-            $('#signIn').click(function(){
-                $("#signinModal").modal('toggle');
-                $("#loginModal").modal('toggle');
-            });
-        });
-    </script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@
             <ul class="navbar-nav mr-sm-auto">
                 <li class="nav-item m-sm-2 active"><a class="nav-link" href="">SEARCH</a></li>
                 <li class="nav-item m-sm-2"><a class="nav-link" href="">What is CVIEW?</a></li>
-                <a class="navbar-text m-sm-2" id="loginBtn">LOGIN</a>
+                <a class="navbar-text m-sm-2 btn" id="loginBtn">LOGIN</a>
             </ul>
         </div>
     </nav>
@@ -223,39 +223,8 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                // Deploy TextAreas
-                $('#jobOpt').click(function () {
-                    $('#JobFind').collapse('show');
-                    $('#WorkerFind').collapse('hide');
-                });
-                $('#WorkerOpt').click(function () {
-                    $('#WorkerFind').collapse('show');
-                    $('#JobFind').collapse('hide');
-                });
-
-                // Deploy Login Modal
-                $("#loginBtn").click(function () {
-                    $("#loginModal").modal('toggle');
-                });
-
-                //ToolTips
-                $('#signInBtn').tooltip();
-                $('#logInBtn').tooltip();
-
-                // Deploy SignIn Modal
-                $("#signInBtn").click(function () {
-                    $("#loginModal").modal('toggle');
-                    $("#signinModal").modal('toggle');
-                });
-                // End Sign In
-                $('#signIn').click(function () {
-                    $("#signinModal").modal('toggle');
-                    $("#loginModal").modal('toggle');
-                });
-            });
-        </script>
+        <script src="js/index.js"></script>
+    </div>
 </body>
 
 </html>
