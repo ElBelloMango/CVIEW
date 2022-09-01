@@ -8,7 +8,12 @@
     "lite": "lite-server",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "scss": "sass css/:css/",
-    "watch:all" : "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
+    "usemin": "usemin company.html -d dist --htmlmin -o dist/company.html && usemin index.html -d dist --htmlmin -o dist/index.html && usemin jobs.html -d dist --htmlmin -o dist/jobs.html && usemin profile.html -d dist --htmlmin -o dist/profile.html && usemin workers.html -d dist --htmlmin -o dist/workers.html",
+    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -25,10 +30,15 @@
   },
   "devDependencies": {
     "bootstrap-social": "^5.1.1",
+    "cssmin": "^0.4.3",
     "font-awesome": "^4.7.0",
+    "htmlmin": "^0.0.7",
     "lite-server": "^2.6.1",
     "onchange": "^7.1.0",
     "parallelshell": "^3.0.1",
-    "sass": "^1.54.6"
+    "rimraf": "^2.6.2",
+    "sass": "^1.54.6",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
   }
 }
